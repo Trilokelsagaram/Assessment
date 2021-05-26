@@ -1,0 +1,35 @@
+.productList {
+  margin: 20px 2%;
+  text-align: left;
+}
+.closeBtn {
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ccc;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+}
+.imgNotAvailable {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid;
+  background: #fff;
+}
+
+.networkError {
+  text-align: center;
+  color: red;
+  margin-top: 0;
+  animation: blinker .5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
