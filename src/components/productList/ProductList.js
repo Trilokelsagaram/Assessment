@@ -2,6 +2,7 @@ import './ProductList.css';
 import { useState, useEffect } from 'react';
 import Product from '../product/Product'; 
 import QuickLookModal from '../modal/QuickLookModal';
+import {response} from '../../offlineApiResponse';
 
 const ProductList = () => {
 
@@ -23,7 +24,8 @@ const ProductList = () => {
             })
             .catch(error => {
                 console.log("Errors", error);
-                setErrors(true);
+                setProducts(response.groups);
+                setLoading(false);
             });
         }
     },[products]);
